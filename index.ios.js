@@ -29,6 +29,12 @@ var FactShow  = require('./views/fact_show');
 
 var start_learning_ios = React.createClass({
 
+  getInitialState() {
+    Global.getFiveFacts(null);
+
+    return {bootstrapped: false}
+  },
+
   render: function() {
     return <NavigatorIOS
         style={styles.container}
