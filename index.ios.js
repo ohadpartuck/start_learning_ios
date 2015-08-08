@@ -7,10 +7,12 @@
 var React = require('react-native');
 
 var {
+    AlertIOS,
     AppRegistry,
     Navigator,
     NavigatorIOS,
     PixelRatio,
+    PushNotificationIOS,
     } = React;
 
 window.React = React;
@@ -29,21 +31,40 @@ var FactShow  = require('./views/fact_show');
 
 var start_learning_ios = React.createClass({
 
-  getInitialState() {
-    Global.getFiveFacts(null);
+    componentWillMount() {
+        PushNotificationIOS.addEventListener('notification', this._onNotification);
+    },
 
-    return {bootstrapped: false}
-  },
+    componentWillUnmount() {
+        PushNotificationIOS.removeEventListener('notification', this._onNotification);
+    },
 
-  render: function() {
-    return <NavigatorIOS
-        style={styles.container}
-        ref='nav'
-        initialRoute={{
-          title: 'Start Learning',
-          component: FactShow,
-        }}/>;
-  }
+    _onNotification(notification) {
+        AlertIOS.alert(
+            'Notification Received',
+            'Alert message: ' + notification.getMessage(),
+            [{
+                text: 'Dismiss',
+                onPress: null,
+            }]
+        );
+    },
+
+    getInitialState() {
+        Global.getFiveFacts(null);
+
+        return {bootstrapped: false}
+    },
+
+    render: function() {
+        return <NavigatorIOS
+            style={styles.container}
+            ref='nav'
+            initialRoute={{
+                title: 'Start Learning',
+                component: FactShow,
+            }}/>;
+    }
 });
 
 
