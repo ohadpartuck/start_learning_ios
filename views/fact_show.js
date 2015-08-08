@@ -94,7 +94,7 @@ var FactShow = React.createClass({
                 <View style={styles.FactContainer}>
                     <View>
                         <Text style={styles.headline}>
-                            {this.state.currentFact}
+                            {this.state.currentFact.text}
                         </Text>
                     </View>
                 </View>
