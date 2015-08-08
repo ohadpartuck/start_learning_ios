@@ -7,6 +7,7 @@ var styles = React.StyleSheet.create({
         flex: 1
     },
     globalContainer: {
+        backgroundColor: 'red',
         flex: 1,
     },
     FactContainer: {

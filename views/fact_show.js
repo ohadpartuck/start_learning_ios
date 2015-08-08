@@ -4,16 +4,18 @@ var {
     Text,
     View,
     NavigatorIOS,
-    TabBarIOS,
     TouchableHighlight,
-    Image,
+    AlertIOS,
     ScrollView
     } = React;
 
 var FactShow = React.createClass({
     getInitialState() {
         return {
-            isLoading: true
+            isLoading: true,
+            currentFactNumber: 1,
+            currentFact: startLearning.fiveFacts[0],
+            facts: startLearning.fiveFacts,
         };
     },
 
@@ -29,13 +31,37 @@ var FactShow = React.createClass({
         p('push auth')
     },
 
+    handleScroll(){
+      if (this.state.currentFactNumber < Global.ON_BOARDING_MAX_FACTS){
+          this.state.currentFactNumber += 1;
+          p('new fact is ' + this.state.facts[this.state.currentFactNumber - 1].text);
+          // setState -> page reload
+          this.setState({currentFact: this.state.facts[this.state.currentFactNumber - 1].text})
+      }else{
+          AlertIOS.alert('No more info for you!',
+              'Come back tomorrow :-) Enable push notifications for a' +
+              'daily dose of our Startup info.',
+              [{text: 'Sure', onPress: () => p('should request')},
+               {text: 'No, thanks', onPress: () => p('nothing')}]);
+      }
+      p('scroll')
+    },
+
+    //TODO handle this warning message
+    //'You specified `onScroll` on a <ScrollView> but not ' +
+    // '`scrollEventThrottle`. You will only receive one event. ' +
+    //'Using `16` you get all the events but be aware that it may ' +
+    //'cause frame drops, use a bigger number if you don\'t need as ' +
+    //'much precision.'
     render: function() {
         return (
-            <View style={styles.globalContainer}>
+            <ScrollView style={styles.globalContainer}
+
+                onScroll={this.handleScroll}>
                 <View style={styles.FactContainer}>
                     <View>
                         <Text style={styles.headline}>
-                            A Million StartUps Open every year worldwide.
+                            {this.state.currentFact}
                         </Text>
                     </View>
                 </View>
@@ -44,19 +70,18 @@ var FactShow = React.createClass({
 
                     <TouchableHighlight
                         style={styles.links}
-                        onPress={this.requestPushAuthorization.bind(this)}>
+                        onPress={this.requestPushAuthorization}>
                         <Text style={styles.links}>push me with intersting stuff</Text>
                     </TouchableHighlight>
 
                     <TouchableHighlight
                         style={styles.links}
-                        onPress={this.openNativeEmailClient.bind(this)}>
+                        onPress={this.openNativeEmailClient}>
                         <Text style={styles.links}>Feedback</Text>
                     </TouchableHighlight>
 
-
                 </View>
-            </View>
+            </ScrollView>
 
        );
     }
