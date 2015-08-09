@@ -104,13 +104,13 @@ var FactShow = React.createClass({
                     <TouchableHighlight
                         style={styles.links}
                         onPress={this.requestPushAuthorization}>
-                        <Text style={styles.links}>push me with intersting stuff</Text>
+                        <Text style={styles.links}>שלח לי עדכון יומי מעניין</Text>
                     </TouchableHighlight>
 
                     <TouchableHighlight
                         style={styles.links}
                         onPress={this.openNativeEmailClient}>
-                        <Text style={styles.links}>Feedback</Text>
+                        <Text style={styles.links}>פידבק?</Text>
                     </TouchableHighlight>
 
                 </View>

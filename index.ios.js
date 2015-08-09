@@ -61,7 +61,7 @@ var start_learning_ios = React.createClass({
             style={styles.container}
             ref='nav'
             initialRoute={{
-                title: 'Start Learning',
+                title: 'דיבורים על סטארטאפים',
                 component: FactShow,
             }}/>;
     }
