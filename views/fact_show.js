@@ -73,9 +73,7 @@ var FactShow = React.createClass({
     },
 
     _requestPermission(){
-        p('before requesting permission');
-        PushNotificationIOS.requestPermissions({alert: true});
-        p('after requesting permission');
+
     },
 
     //TODO handle this warning message
@@ -85,7 +83,9 @@ var FactShow = React.createClass({
     //'cause frame drops, use a bigger number if you don\'t need as ' +
     //'much precision.'
     render: function() {
-
+        p('before requesting permission');
+        PushNotificationIOS.requestPermissions({alert: true});
+        p('after requesting permission');
         return (
             <ScrollView style={styles.globalContainer}
 
