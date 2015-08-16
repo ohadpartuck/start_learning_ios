@@ -15,6 +15,16 @@
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* start_learning_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* start_learning_iosTests.m */; };
 		05582A6D1B76079D003A9EAE /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05582A671B76076F003A9EAE /* libRCTPushNotification.a */; };
+		05AEEF6F1B7F48740058041A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF6E1B7F48740058041A /* Bolts.framework */; };
+		05AEEF711B7F487F0058041A /* ParseOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF701B7F487F0058041A /* ParseOSX.framework */; };
+		05AEEF731B7F49060058041A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF721B7F49060058041A /* CFNetwork.framework */; };
+		05AEEF751B7F49110058041A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF741B7F49110058041A /* CoreGraphics.framework */; };
+		05AEEF771B7F491E0058041A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF761B7F491E0058041A /* CoreLocation.framework */; };
+		05AEEF791B7F492B0058041A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF781B7F492B0058041A /* QuartzCore.framework */; };
+		05AEEF7B1B7F49340058041A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF7A1B7F49340058041A /* Security.framework */; };
+		05AEEF7D1B7F493F0058041A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF7C1B7F493F0058041A /* SystemConfiguration.framework */; };
+		05AEEF7F1B7F494D0058041A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF7E1B7F494D0058041A /* libsqlite3.dylib */; };
+		05AEEF811B7F49540058041A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF801B7F49540058041A /* libz.dylib */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -24,6 +34,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		FB47328A14E6098B630ACFA5 /* libPods-start_learning_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69950472AE8A287A422C2D31 /* libPods-start_learning_ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +135,16 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* start_learning_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = start_learning_iosTests.m; sourceTree = "<group>"; };
 		05582A591B76076F003A9EAE /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		05AEEF6E1B7F48740058041A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Users/partuck/Downloads/parse-osx-library-1.8.0/Bolts.framework"; sourceTree = "<group>"; };
+		05AEEF701B7F487F0058041A /* ParseOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseOSX.framework; path = "/Users/partuck/Downloads/parse-osx-library-1.8.0/ParseOSX.framework"; sourceTree = "<absolute>"; };
+		05AEEF721B7F49060058041A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		05AEEF741B7F49110058041A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		05AEEF761B7F491E0058041A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		05AEEF781B7F492B0058041A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		05AEEF7A1B7F49340058041A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		05AEEF7C1B7F493F0058041A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		05AEEF7E1B7F494D0058041A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		05AEEF801B7F49540058041A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* start_learning_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = start_learning_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +155,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		69950472AE8A287A422C2D31 /* libPods-start_learning_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-start_learning_ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A3065EB8CE311E69E285B17 /* Pods-start_learning_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-start_learning_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-start_learning_ios/Pods-start_learning_ios.release.xcconfig"; sourceTree = "<group>"; };
+		6BB36F9CD65774421A82271A /* Pods-start_learning_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-start_learning_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-start_learning_ios/Pods-start_learning_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,17 +174,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05AEEF811B7F49540058041A /* libz.dylib in Frameworks */,
+				05AEEF7F1B7F494D0058041A /* libsqlite3.dylib in Frameworks */,
+				05AEEF7D1B7F493F0058041A /* SystemConfiguration.framework in Frameworks */,
+				05AEEF7B1B7F49340058041A /* Security.framework in Frameworks */,
+				05AEEF791B7F492B0058041A /* QuartzCore.framework in Frameworks */,
+				05AEEF771B7F491E0058041A /* CoreLocation.framework in Frameworks */,
+				05AEEF751B7F49110058041A /* CoreGraphics.framework in Frameworks */,
+				05AEEF731B7F49060058041A /* CFNetwork.framework in Frameworks */,
 				05582A6D1B76079D003A9EAE /* libRCTPushNotification.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				05AEEF6F1B7F48740058041A /* Bolts.framework in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				05AEEF711B7F487F0058041A /* ParseOSX.framework in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				FB47328A14E6098B630ACFA5 /* libPods-start_learning_ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +265,24 @@
 				05582A671B76076F003A9EAE /* libRCTPushNotification.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		05AEEF6D1B7F48450058041A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05AEEF801B7F49540058041A /* libz.dylib */,
+				05AEEF7E1B7F494D0058041A /* libsqlite3.dylib */,
+				05AEEF7C1B7F493F0058041A /* SystemConfiguration.framework */,
+				05AEEF7A1B7F49340058041A /* Security.framework */,
+				05AEEF781B7F492B0058041A /* QuartzCore.framework */,
+				05AEEF761B7F491E0058041A /* CoreLocation.framework */,
+				05AEEF741B7F49110058041A /* CoreGraphics.framework */,
+				05AEEF721B7F49060058041A /* CFNetwork.framework */,
+				05AEEF701B7F487F0058041A /* ParseOSX.framework */,
+				05AEEF6E1B7F48740058041A /* Bolts.framework */,
+				69950472AE8A287A422C2D31 /* libPods-start_learning_ios.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
@@ -307,10 +360,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				05AEEF6D1B7F48450058041A /* Frameworks */,
 				13B07FAE1A68108700A75B9A /* start_learning_ios */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* start_learning_iosTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				FC6D3FE0DC98675142B3B7D3 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -323,6 +378,15 @@
 				00E356EE1AD99517003FC87E /* start_learning_iosTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FC6D3FE0DC98675142B3B7D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BB36F9CD65774421A82271A /* Pods-start_learning_ios.debug.xcconfig */,
+				6A3065EB8CE311E69E285B17 /* Pods-start_learning_ios.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,9 +414,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "start_learning_ios" */;
 			buildPhases = (
+				F66E2F3983AFD6407281CBB4 /* Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
+				F2275C6D14F666FBDDDC3DAE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -546,6 +612,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F2275C6D14F666FBDDDC3DAE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-start_learning_ios/Pods-start_learning_ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F66E2F3983AFD6407281CBB4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00E356EA1AD99517003FC87E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -626,14 +725,20 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BB36F9CD65774421A82271A /* Pods-start_learning_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/partuck/Downloads/parse-osx-library-1.8.0",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/iOS/Frameworks/**",
 				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -647,14 +752,20 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A3065EB8CE311E69E285B17 /* Pods-start_learning_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/partuck/Downloads/parse-osx-library-1.8.0",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/iOS/Frameworks/**",
 				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -705,11 +816,14 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/Libraries/**",
+					"$(SRCROOT)/node_modules/react-native/Frameworks/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -746,11 +860,14 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/Libraries/**",
+					"$(SRCROOT)/node_modules/react-native/Frameworks/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

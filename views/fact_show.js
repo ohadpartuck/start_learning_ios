@@ -31,6 +31,11 @@ var FactShow = React.createClass({
         p('emailed')
     },
 
+    _abandonPermissions(){
+        PushNotificationIOS.abandonPermissions()
+        p('after abandonPermissions')
+    },
+
     requestPushAuthorization(){
         p('push auth')
     },
@@ -42,7 +47,7 @@ var FactShow = React.createClass({
             this.state.currentFactNumber += 1;
             p('new fact is ' + this.state.facts[this.state.currentFactNumber - 1].text);
             // setState -> page reload
-            this.setState({currentFact: this.state.facts[this.state.currentFactNumber - 1].text});
+            this.setState({currentFact: this.state.facts[this.state.currentFactNumber - 1]});
             if (this.state.currentFactNumber >= Global.ON_BOARDING_MAX_FACTS) {
                 this.saveThatUserReachedLimit();
             }
@@ -68,11 +73,22 @@ var FactShow = React.createClass({
 
     _showPermissions() {
         PushNotificationIOS.checkPermissions((permissions) => {
+            p(permissions);
             this.setState({permissions});
         });
     },
 
     _requestPermission(){
+        p('before requesting permission');
+        var result = PushNotificationIOS.requestPermissions({alert: true});
+        p('after requesting permission -- ' + result);
+    },
+
+    _onRegister(deviceToken){
+        p('_onRegister');
+        p(deviceToken);
+
+        //TODO send to parse to register the device
 
     },
 
@@ -83,9 +99,10 @@ var FactShow = React.createClass({
     //'cause frame drops, use a bigger number if you don\'t need as ' +
     //'much precision.'
     render: function() {
+        PushNotificationIOS.addEventListener('register', this._onRegister);
         p('before requesting permission');
-        PushNotificationIOS.requestPermissions({alert: true});
-        p('after requesting permission');
+        var result = PushNotificationIOS.requestPermissions({alert: true, badge: true, sound: true});
+        p('after requesting permission +++ ' +  result);
         return (
             <ScrollView style={styles.globalContainer}
 
@@ -103,7 +120,7 @@ var FactShow = React.createClass({
 
                     <TouchableHighlight
                         style={styles.links}
-                        onPress={this.requestPushAuthorization}>
+                        onPress={this._showPermissions}>
                         <Text style={styles.links}>שלח לי עדכון יומי מעניין</Text>
                     </TouchableHighlight>
 
@@ -111,6 +128,12 @@ var FactShow = React.createClass({
                         style={styles.links}
                         onPress={this.openNativeEmailClient}>
                         <Text style={styles.links}>פידבק?</Text>
+                    </TouchableHighlight>
+
+                    <TouchableHighlight
+                        style={styles.links}
+                        onPress={this._abandonPermissions}>
+                        <Text style={styles.links}>בטל התראות יומיות</Text>
                     </TouchableHighlight>
 
                 </View>
