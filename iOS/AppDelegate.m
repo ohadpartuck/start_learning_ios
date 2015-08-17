@@ -2,6 +2,7 @@
 #import "AppDelegate.h"
 
 #import "RCTRootView.h"
+#import <ParseOSX/ParseOSX.h>
 
 @implementation AppDelegate
 
@@ -9,7 +10,8 @@
 {
   NSURL *jsCodeLocation;
 
-  
+  [Parse setApplicationId:@"ZvSyh5fb19JQLYdK7Vm1wOmE1YNrNB9b79SHoxvg"
+                clientKey:@"9fe7DgwEd3KBvHVvLZFdB7ZGX1bjffvZOKkEJVdP"];
   if (true){
       // development
       jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle"];
