@@ -15,6 +15,9 @@
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* start_learning_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* start_learning_iosTests.m */; };
 		05582A6D1B76079D003A9EAE /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05582A671B76076F003A9EAE /* libRCTPushNotification.a */; };
+		057A9F501B83B30400C03BF3 /* libRNMail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057A9F4D1B83B2E200C03BF3 /* libRNMail.a */; };
+		057A9F531B83B30400C03BF3 /* libBolts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057A9F511B83B30400C03BF3 /* libBolts.a */; };
+		057A9F541B83B30400C03BF3 /* libParse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057A9F521B83B30400C03BF3 /* libParse.a */; };
 		05AEEF6F1B7F48740058041A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF6E1B7F48740058041A /* Bolts.framework */; };
 		05AEEF711B7F487F0058041A /* ParseOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF701B7F487F0058041A /* ParseOSX.framework */; };
 		05AEEF731B7F49060058041A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AEEF721B7F49060058041A /* CFNetwork.framework */; };
@@ -87,6 +90,20 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RCTPushNotification;
 		};
+		057A9F4C1B83B2E200C03BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057A9F471B83B2E200C03BF3 /* RNMail.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46FEDE7F1AFF192F00D3261C;
+			remoteInfo = RNMail;
+		};
+		057A9F4E1B83B2E200C03BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057A9F471B83B2E200C03BF3 /* RNMail.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46FEDE8A1AFF192F00D3261C;
+			remoteInfo = RNMailTests;
+		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
@@ -135,6 +152,9 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* start_learning_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = start_learning_iosTests.m; sourceTree = "<group>"; };
 		05582A591B76076F003A9EAE /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		057A9F471B83B2E200C03BF3 /* RNMail.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNMail.xcodeproj; path = "node_modules/react-native-mail/RNMail.xcodeproj"; sourceTree = "<group>"; };
+		057A9F511B83B30400C03BF3 /* libBolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBolts.a; path = "Pods/../build/Debug-iphoneos/libBolts.a"; sourceTree = "<group>"; };
+		057A9F521B83B30400C03BF3 /* libParse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParse.a; path = "Pods/../build/Debug-iphoneos/libParse.a"; sourceTree = "<group>"; };
 		05AEEF6E1B7F48740058041A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Users/partuck/Downloads/parse-osx-library-1.8.0/Bolts.framework"; sourceTree = "<group>"; };
 		05AEEF701B7F487F0058041A /* ParseOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseOSX.framework; path = "/Users/partuck/Downloads/parse-osx-library-1.8.0/ParseOSX.framework"; sourceTree = "<absolute>"; };
 		05AEEF721B7F49060058041A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -174,6 +194,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057A9F531B83B30400C03BF3 /* libBolts.a in Frameworks */,
+				057A9F541B83B30400C03BF3 /* libParse.a in Frameworks */,
+				057A9F501B83B30400C03BF3 /* libRNMail.a in Frameworks */,
 				05AEEF811B7F49540058041A /* libz.dylib in Frameworks */,
 				05AEEF7F1B7F494D0058041A /* libsqlite3.dylib in Frameworks */,
 				05AEEF7D1B7F493F0058041A /* SystemConfiguration.framework in Frameworks */,
@@ -267,9 +290,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		057A9F481B83B2E200C03BF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				057A9F4D1B83B2E200C03BF3 /* libRNMail.a */,
+				057A9F4F1B83B2E200C03BF3 /* RNMailTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		05AEEF6D1B7F48450058041A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				057A9F511B83B30400C03BF3 /* libBolts.a */,
+				057A9F521B83B30400C03BF3 /* libParse.a */,
 				05AEEF801B7F49540058041A /* libz.dylib */,
 				05AEEF7E1B7F494D0058041A /* libsqlite3.dylib */,
 				05AEEF7C1B7F493F0058041A /* SystemConfiguration.framework */,
@@ -334,6 +368,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				057A9F471B83B2E200C03BF3 /* RNMail.xcodeproj */,
 				05582A591B76076F003A9EAE /* RCTPushNotification.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -503,6 +538,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 057A9F481B83B2E200C03BF3 /* Products */;
+					ProjectRef = 057A9F471B83B2E200C03BF3 /* RNMail.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -553,6 +592,20 @@
 			fileType = archive.ar;
 			path = libRCTPushNotification.a;
 			remoteRef = 05582A661B76076F003A9EAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		057A9F4D1B83B2E200C03BF3 /* libRNMail.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNMail.a;
+			remoteRef = 057A9F4C1B83B2E200C03BF3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		057A9F4F1B83B2E200C03BF3 /* RNMailTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RNMailTests.xctest;
+			remoteRef = 057A9F4E1B83B2E200C03BF3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
@@ -743,6 +796,10 @@
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = start_learning_ios;
 				PROVISIONING_PROFILE = "";
@@ -770,6 +827,10 @@
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = start_learning_ios;
 				PROVISIONING_PROFILE = "";
@@ -781,6 +842,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+				);
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -821,9 +887,11 @@
 					"$(SRCROOT)/node_modules/react-native/Frameworks/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos8.4;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -832,6 +900,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+				);
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -847,7 +920,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -866,9 +939,11 @@
 					"$(SRCROOT)/node_modules/react-native/Frameworks/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos8.4;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};

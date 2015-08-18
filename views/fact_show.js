@@ -28,7 +28,8 @@ var FactShow = React.createClass({
     },
 
     openNativeEmailClient(){
-        p('emailed')
+       Global.sendMail();
+        p('email')
     },
 
     _abandonPermissions(){
@@ -105,7 +106,6 @@ var FactShow = React.createClass({
         p('after requesting permission +++ ' +  result);
         return (
             <ScrollView style={styles.globalContainer}
-
                 onScroll={this.handleScroll}>
 
                 <View style={styles.FactContainer}>

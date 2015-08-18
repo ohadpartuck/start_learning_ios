@@ -7,16 +7,20 @@ var styles = React.StyleSheet.create({
         flex: 1
     },
     globalContainer: {
-        backgroundColor: 'red',
+        backgroundColor: '#F4F4F4',
         flex: 1,
     },
     FactContainer: {
+
+        paddingTop: 100,
+        paddingLeft: 50,
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center',
-        flex: 90 ,
+        flex: 90,
     },
     FeedBackContainer: {
+        paddingTop: 100,
         paddingLeft: 30,
         paddingRight: 30,
         flex: 10,

@@ -2,16 +2,16 @@
 #import "AppDelegate.h"
 
 #import "RCTRootView.h"
-#import <ParseOSX/ParseOSX.h>
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
-
-  [Parse setApplicationId:@"ZvSyh5fb19JQLYdK7Vm1wOmE1YNrNB9b79SHoxvg"
-                clientKey:@"9fe7DgwEd3KBvHVvLZFdB7ZGX1bjffvZOKkEJVdP"];
+    [Parse setApplicationId:@"ZvSyh5fb19JQLYdK7Vm1wOmE1YNrNB9b79SHoxvg"
+                   clientKey:@"9fe7DgwEd3KBvHVvLZFdB7ZGX1bjffvZOKkEJVdP"];
+  
   if (true){
       // development
       jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle"];
