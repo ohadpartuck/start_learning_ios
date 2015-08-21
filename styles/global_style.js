@@ -7,15 +7,17 @@ var styles = React.StyleSheet.create({
         flex: 1
     },
     globalContainer: {
-        backgroundColor: '#F4F4F4',
+        //backgroundColor: '#F4F4F4',
+        backgroundColor: 'white',
+
         flex: 1,
     },
     FactContainer: {
 
         paddingTop: 100,
-        paddingLeft: 50,
         alignItems: 'center',
         flexDirection: 'row',
+        textAlign: 'center',
         justifyContent: 'center',
         flex: 90,
     },
@@ -29,6 +31,14 @@ var styles = React.StyleSheet.create({
         color: 'black',
         fontSize: 27,
         alignItems: 'center',
+        textAlign: 'center',
+        width: Global.rowWidthByDevice(),
+    },
+    dateText: {
+        color: 'gray',
+        fontSize: 13,
+        alignItems: 'flex-end',
+        textAlign: 'right',
         width: Global.rowWidthByDevice(),
     },
     links: {

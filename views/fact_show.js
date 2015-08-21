@@ -88,9 +88,12 @@ var FactShow = React.createClass({
     _onRegister(deviceToken){
         p('_onRegister');
         p(deviceToken);
-
         //TODO send to parse to register the device
+    },
 
+    _getFactDate(factDate){
+        // TODO validate factDate is defined
+        return new Date(factDate).toString();
     },
 
     //TODO handle this warning message
@@ -102,7 +105,7 @@ var FactShow = React.createClass({
     render: function() {
         PushNotificationIOS.addEventListener('register', this._onRegister);
         p('before requesting permission');
-        var result = PushNotificationIOS.requestPermissions({alert: true, badge: true, sound: true});
+        var result = PushNotificationIOS.requestPermissions({alert: true, badge: true, sound: false});
         p('after requesting permission +++ ' +  result);
         return (
             <ScrollView style={styles.globalContainer}
@@ -112,6 +115,9 @@ var FactShow = React.createClass({
                     <View>
                         <Text style={styles.headline}>
                             {this.state.currentFact.text}
+                        </Text>
+                        <Text style={styles.dateText}>
+                            {this._getFactDate(this.state.currentFact.date)}
                         </Text>
                     </View>
                 </View>

@@ -44,7 +44,13 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-  [RCTPushNotificationManager application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+//  [RCTPushNotificationManager application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+  
+  // Store the deviceToken in the current installation and save it to Parse.
+  PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+  [currentInstallation setDeviceTokenFromData:deviceToken];
+  currentInstallation.channels = @[ @"global" ];
+  [currentInstallation saveInBackground];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
