@@ -28,12 +28,12 @@ var FactShow = React.createClass({
     },
 
     openNativeEmailClient(){
-       Global.sendMail();
+        Global.sendMail();
         p('email')
     },
 
     _abandonPermissions(){
-        PushNotificationIOS.abandonPermissions()
+        PushNotificationIOS.abandonPermissions();
         p('after abandonPermissions')
     },
 
@@ -41,17 +41,14 @@ var FactShow = React.createClass({
         p('push auth')
     },
 
-    handleScroll(){
+    handleScroll(syntheticEvent){
+        this.state.currentFactNumber += 1;
 
-        if (!this._userReachedHisDailyLimit()){
-
-            this.state.currentFactNumber += 1;
-            p('new fact is ' + this.state.facts[this.state.currentFactNumber - 1].text);
+        if (this.state.facts.length >= this.state.currentFactNumber){
             // setState -> page reload
             this.setState({currentFact: this.state.facts[this.state.currentFactNumber - 1]});
-            if (this.state.currentFactNumber >= Global.ON_BOARDING_MAX_FACTS) {
-                this.saveThatUserReachedLimit();
-            }
+            p('new fact is ' + this.state.facts[this.state.currentFactNumber - 1].text);
+
         }else{
             //save state that the user has reached his limit
             var that = this;
@@ -64,14 +61,6 @@ var FactShow = React.createClass({
         p('scroll')
     },
 
-    saveThatUserReachedLimit(){
-        Global._setLS(Global.USER_REACHED_LIMIT_KEY, (new Date).getTime())
-    },
-
-    _userReachedHisDailyLimit(){
-        return (Global._getLS(Global.USER_REACHED_LIMIT_KEY)) ? true : false
-    },
-
     _showPermissions() {
         PushNotificationIOS.checkPermissions((permissions) => {
             p(permissions);
@@ -81,7 +70,7 @@ var FactShow = React.createClass({
 
     _requestPermission(){
         p('before requesting permission');
-        var result = PushNotificationIOS.requestPermissions({alert: true});
+        var result = PushNotificationIOS.requestPermissions({alert: true, badge: true, sound: true});
         p('after requesting permission -- ' + result);
     },
 
@@ -93,7 +82,9 @@ var FactShow = React.createClass({
 
     _getFactDate(factDate){
         // TODO validate factDate is defined
-        return new Date(factDate).toString();
+        return new Date().toISOString().
+            replace(/T/, ' ').      // replace T with a space
+            replace(/\..+/, '');     // delete the dot and everything after;
     },
 
     //TODO handle this warning message
@@ -105,11 +96,12 @@ var FactShow = React.createClass({
     render: function() {
         PushNotificationIOS.addEventListener('register', this._onRegister);
         p('before requesting permission');
-        var result = PushNotificationIOS.requestPermissions({alert: true, badge: true, sound: false});
+        var result = PushNotificationIOS.requestPermissions({alert: true, badge: true, sound: true});
         p('after requesting permission +++ ' +  result);
         return (
             <ScrollView style={styles.globalContainer}
-                onScroll={this.handleScroll}>
+                onScroll={this.handleScroll}
+                contentInset={{top: -50}}>
 
                 <View style={styles.FactContainer}>
                     <View>
